@@ -1,13 +1,16 @@
-let name = document.getElementById('name')
-let kilometres = document.getElementById('kilometres')
-let age = document.getElementById('age')
-const btnGen = document.getElementById('btn-gen')
-const btnNull = document.getElementById('btn-null')
+// TICKET AND USER INFO
+let nameInput = document.getElementById('name')
+let kilometresInput = document.getElementById('kilometres')
+let ageInput = document.getElementById('age')
 const cancel = document.getElementById('output')
 const price = 0.21
 let ticketPrice = kilometres * price
 let message;
 let offer = 'Biglietto Standard'
+// BUTTONS
+const btnGen = document.getElementById('btn-gen')
+const btnNull = document.getElementById('btn-null')
+// NUMBER GENERATOR
 const maxCarriage = 20
 const minCarriage = 1
 let carriage = Math.floor(Math.random() * (maxCarriage - minCarriage + 1) + minCarriage);
@@ -17,9 +20,12 @@ let CPCode = Math.floor(Math.random() * (maxCP - minCP + 1) + minCP);
 
 
 btnGen.addEventListener('click', function(){
-    kilometres = parseInt(kilometres.value);
-    age = parseInt(age.value);
-    name = name.value;
+    const kilometres = kilometresInput.value;
+    const age = ageInput.value
+    const name = nameInput.value;
+    nameInput.value = ''
+    ageInput.value = ''
+    kilometresInput.value = ''
     ticketPrice = kilometres * price
     message = `
     <h2>Il tuo biglietto:</h2>
@@ -120,4 +126,7 @@ btnGen.addEventListener('click', function(){
 
 btnNull.addEventListener('click', function(){
     cancel.className = "d-none"
+    nameInput.value = ''
+    ageInput.value = ''
+    kilometresInput.value = ''
 })
