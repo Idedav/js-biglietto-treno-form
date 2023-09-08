@@ -2,6 +2,8 @@ let name = document.getElementById('name')
 let kilometres = document.getElementById('kilometres')
 let age = document.getElementById('age')
 const btnGen = document.getElementById('btn-gen')
+const btnNull = document.getElementById('btn-null')
+const cancel = document.getElementById('output')
 const price = 0.21
 let ticketPrice = kilometres * price
 let message;
@@ -114,4 +116,8 @@ btnGen.addEventListener('click', function(){
 
     document.getElementById('output').innerHTML = message
 
+})
+
+btnNull.addEventListener('click', function(){
+    cancel.className = "d-none"
 })
