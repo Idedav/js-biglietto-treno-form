@@ -6,7 +6,12 @@ const price = 0.21
 let ticketPrice = kilometres * price
 let message;
 let offer = 'Biglietto Standard'
-
+const maxCarriage = 20
+const minCarriage = 1
+let carriage = Math.floor(Math.random() * (maxCarriage - minCarriage + 1) + minCarriage);
+const maxCP = 99999
+const minCP =  10000
+let CPCode = Math.floor(Math.random() * (maxCP - minCP + 1) + minCP);
 
 
 btnGen.addEventListener('click', function(){
@@ -28,15 +33,15 @@ btnGen.addEventListener('click', function(){
             </div>
             <div class="col">
                 <h4>Carrozza</h4>
-                <span>carrozza</span>
+                <span>${carriage}</span>
             </div>
             <div class="col">
                 <h4>Codice CP</h4>
-                <span>codice</span>
+                <span>${CPCode}</span>
             </div>
             <div class="col">
                 <h4>Costo Biglietto</h4>
-                <span>${ticketPrice}</span>
+                <span>${ticketPrice.toFixed(2)} &euro;</span>
             </div>
         </div>
     </div>
@@ -61,15 +66,15 @@ btnGen.addEventListener('click', function(){
                 </div>
                 <div class="col">
                     <h4>Carrozza</h4>
-                    <span>carrozza</span>
+                    <span>${carriage}</span>
                 </div>
                 <div class="col">
                     <h4>Codice CP</h4>
-                    <span>codice</span>
+                    <span>${CPCode}</span>
                 </div>
                 <div class="col">
                     <h4>Costo Biglietto</h4>
-                    <span>${ticketPrice}</span>
+                    <span>${ticketPrice.toFixed(2)} &euro;</span>
                 </div>
             </div>
         </div>
@@ -92,15 +97,15 @@ btnGen.addEventListener('click', function(){
                 </div>
                 <div class="col">
                     <h4>Carrozza</h4>
-                    <span>carrozza</span>
+                    <span>${carriage}</span>
                 </div>
                 <div class="col">
                     <h4>Codice CP</h4>
-                    <span>codice</span>
+                    <span>${CPCode}</span>
                 </div>
                 <div class="col">
                     <h4>Costo Biglietto</h4>
-                    <span>${ticketPrice}</span>
+                    <span>${ticketPrice.toFixed(2)} &euro;</span>
                 </div>
             </div>
         </div>
