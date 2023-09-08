@@ -11,11 +11,35 @@
     <title>TreniBoolean</title>
 </head>
 <body>
+    <header class="d-flex align-items-center">
+        <div class="container dc-container">
+            <h1>TreniBoolean</h1>
+            <div class="user-info"> 
 
-        <input type="text" id="kilometres">
-        <input type="text" id="age">
-        <button class="btn btn-primary" id="btn-gen">Genera</button>
-        <h1 id="output"></h1>
+                <div class="user-name d-flex flex-column">
+                    <label for="">Inserire il nome</label>
+                    <input type="text" id="name">   
+                </div>
+
+                <div class="user-kilometres d-flex flex-column">
+                    <label for="">Inseire i Km che vuoi percorrere</label>
+                    <input type="text" id="kilometres">
+                </div>
+
+                <div class="user-age d-flex flex-column">
+                    <label for="">Inserire la tua età</label>
+                    <input type="text" id="age">
+                </div>
+            </div>
+            <button class="btn btn-primary my-4" id="btn-gen">Genera</button>
+
+
+            
+            <div id="output">
+            </div>
+
+        </div>
+    </header>
 
     <!-- JAVASCRIPT -->
     <script src="js/script.js"></script>

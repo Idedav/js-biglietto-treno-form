@@ -1,0 +1,11 @@
+header{
+    height: 1000px;
+    background-image: url(/img/Train.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+.dc-container{
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, .5);
+}
