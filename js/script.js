@@ -29,91 +29,91 @@ btnGen.addEventListener('click', function(){
     ticketPrice = kilometres * price
     message = `
     <h2>Il tuo biglietto:</h2>
-    <div class="container d-flex">
-        <div class="row">
-            <div class="col-5">
+    <div class="container d-flex my-5">
+        <div class="row dc-row">
+            <div class="col-4 d-flex flex-column justify-content-between dc-col">
                 <h3>Nome Passeggero</h3>
-                <span>${name}</span>
+                <span class="my-4">${name}</span>
             </div>
-            <div class="col">
+            <div class="col d-flex flex-column justify-content-between">
                 <h4>Offerta</h4>
-                <span>${offer}</span>
+                <span class="my-4">${offer}</span>
             </div>
-            <div class="col">
+            <div class="col d-flex flex-column justify-content-between">
                 <h4>Carrozza</h4>
-                <span>${carriage}</span>
+                <span class="my-4">${carriage}</span>
             </div>
-            <div class="col">
+            <div class="col-2 d-flex flex-column justify-content-between">
                 <h4>Codice CP</h4>
-                <span>${CPCode}</span>
+                <span class="my-4">${CPCode}</span>
             </div>
-            <div class="col">
+            <div class="col d-flex flex-column justify-content-between">
                 <h4>Costo Biglietto</h4>
-                <span>${ticketPrice.toFixed(2)} &euro;</span>
+                <span class="my-4">${ticketPrice.toFixed(2)} &euro;</span>
             </div>
         </div>
     </div>
     `
     document.getElementById('output').innerHTML = message
 
-    if(age < 18){
+    if(age === '1'){
         const discountYoung = ticketPrice * 20 / 100;
         ticketPrice -= discountYoung;
         offer = 'Biglietto  Young'
         message =`
         <h2>Il tuo biglietto:</h2>
-        <div class="container d-flex">
-            <div class="row">
-                <div class="col-5">
+        <div class="container d-flex my-5">
+            <div class="row dc-row">
+                <div class="col-4 d-flex flex-column justify-content-between dc-col">
                     <h3>Nome Passeggero</h3>
-                    <span>${name}</span>
+                    <span class="my-4">${name}</span>
                 </div>
-                <div class="col">
+                <div class="col d-flex flex-column justify-content-between">
                     <h4>Offerta</h4>
-                    <span>${offer}</span>
+                    <span class="my-4">${offer}</span>
                 </div>
-                <div class="col">
+                <div class="col d-flex flex-column justify-content-between">
                     <h4>Carrozza</h4>
-                    <span>${carriage}</span>
+                    <span class="my-4">${carriage}</span>
                 </div>
-                <div class="col">
+                <div class="col-2 d-flex flex-column justify-content-between">
                     <h4>Codice CP</h4>
-                    <span>${CPCode}</span>
+                    <span class="my-4">${CPCode}</span>
                 </div>
-                <div class="col">
+                <div class="col d-flex flex-column justify-content-between">
                     <h4>Costo Biglietto</h4>
-                    <span>${ticketPrice.toFixed(2)} &euro;</span>
+                    <span class="my-4">${ticketPrice.toFixed(2)} &euro;</span>
                 </div>
             </div>
         </div>
         `
-    }else if(age > 65){
+    }else if(age === '2'){
         const discountSilver = ticketPrice * 40 / 100;
         ticketPrice -= discountSilver
         offer = 'Biglietto Silver'
         message =`
         <h2>Il tuo biglietto:</h2>
-        <div class="container d-flex">
-            <div class="row">
-                <div class="col-5">
+        <div class="container d-flex my-5">
+            <div class="row dc-row">
+                <div class="col-4 d-flex flex-column justify-content-between dc-col">
                     <h3>Nome Passeggero</h3>
-                    <span>${name}</span>
+                    <span class="my-4">${name}</span>
                 </div>
-                <div class="col">
+                <div class="col d-flex flex-column justify-content-between">
                     <h4>Offerta</h4>
-                    <span>${offer}</span>
+                    <span class="my-4">${offer}</span>
                 </div>
-                <div class="col">
+                <div class="col d-flex flex-column justify-content-between">
                     <h4>Carrozza</h4>
-                    <span>${carriage}</span>
+                    <span class="my-4">${carriage}</span>
                 </div>
-                <div class="col">
+                <div class="col-2 d-flex flex-column justify-content-between">
                     <h4>Codice CP</h4>
-                    <span>${CPCode}</span>
+                    <span class="my-4">${CPCode}</span>
                 </div>
-                <div class="col">
+                <div class="col d-flex flex-column justify-content-between">
                     <h4>Costo Biglietto</h4>
-                    <span>${ticketPrice.toFixed(2)} &euro;</span>
+                    <span class="my-4">${ticketPrice.toFixed(2)} &euro;</span>
                 </div>
             </div>
         </div>
