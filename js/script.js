@@ -55,14 +55,6 @@ btnGen.addEventListener('click', function(){
         </div>
     </div>
     `
-// CONTROLLO KILOMETRAGGIO VALIDO
-    if(isNaN(kilometres)){
-        let insertOk = false
-        message = `
-        <h2>Errore:</h2>
-        <h3>Numero kilometri non valido, perfavore riprova inserendo il numero di kilometri che desideri percorrere.</h3>
-        `
-    }
 
 // CONTROLLO DELL ETA PER INSERIRE LO SCONTO 
     if(age === '1'){
@@ -126,6 +118,15 @@ btnGen.addEventListener('click', function(){
                 </div>
             </div>
         </div>
+        `
+    }
+    
+// CONTROLLO KILOMETRAGGIO VALIDO
+    if(isNaN(kilometres)){
+        let insertOk = false
+        message = `
+        <h2>Errore:</h2>
+        <h3>Numero kilometri non valido, perfavore riprova inserendo il numero di kilometri che desideri percorrere.</h3>
         `
     }
 
