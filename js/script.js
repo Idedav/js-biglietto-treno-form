@@ -17,8 +17,9 @@ let carriage = Math.floor(Math.random() * (maxCarriage - minCarriage + 1) + minC
 const maxCP = 99999
 const minCP =  10000
 let CPCode = Math.floor(Math.random() * (maxCP - minCP + 1) + minCP);
+let insertOk = true
 
-
+// FUNZIONE DEL BOTTONE 'GENERA'
 btnGen.addEventListener('click', function(){
     const kilometres = kilometresInput.value;
     const age = ageInput.value
@@ -54,8 +55,16 @@ btnGen.addEventListener('click', function(){
         </div>
     </div>
     `
-    document.getElementById('output').innerHTML = message
+// CONTROLLO KILOMETRAGGIO VALIDO
+    if(isNaN(kilometres)){
+        let insertOk = false
+        message = `
+        <h2>Errore:</h2>
+        <h3>Numero kilometri non valido, perfavore riprova inserendo il numero di kilometri che desideri percorrere.</h3>
+        `
+    }
 
+// CONTROLLO DELL ETA PER INSERIRE LO SCONTO 
     if(age === '1'){
         const discountYoung = ticketPrice * 20 / 100;
         ticketPrice -= discountYoung;
@@ -123,7 +132,7 @@ btnGen.addEventListener('click', function(){
     document.getElementById('output').innerHTML = message
 
 })
-
+// FUNZIONE DEL BOTTONE 'ANNULLA'
 btnNull.addEventListener('click', function(){
     cancel.className = "d-none"
     nameInput.value = ''
