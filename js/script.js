@@ -20,7 +20,12 @@ let CPCode = Math.floor(Math.random() * (maxCP - minCP + 1) + minCP);
 let insertOk = true
 
 // FUNZIONE DEL BOTTONE 'GENERA'
-btnGen.addEventListener('click', function(){
+btnGen.addEventListener('click', ticketGenerator);
+// FUNZIONE DEL BOTTONE 'ANNULLA'
+btnNull.addEventListener('click', reset);
+
+// FUNZIONE DEL BOTTONE 'GENERA'
+function ticketGenerator(){
     const kilometres = kilometresInput.value;
     const age = ageInput.value
     const name = nameInput.value;
@@ -131,12 +136,11 @@ btnGen.addEventListener('click', function(){
     }
 
     document.getElementById('output').innerHTML = message
-
-})
+}
 // FUNZIONE DEL BOTTONE 'ANNULLA'
-btnNull.addEventListener('click', function(){
+function reset(){
     cancel.className = "d-none"
     nameInput.value = ''
     ageInput.value = ''
     kilometresInput.value = ''
-})
+}
