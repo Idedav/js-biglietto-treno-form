@@ -11,12 +11,8 @@ let offer = 'Biglietto Standard'
 const btnGen = document.getElementById('btn-gen')
 const btnNull = document.getElementById('btn-null')
 // NUMBER GENERATOR
-const maxCarriage = 20
-const minCarriage = 1
-let carriage = Math.floor(Math.random() * (maxCarriage - minCarriage + 1) + minCarriage);
-const maxCP = 99999
-const minCP =  10000
-let CPCode = Math.floor(Math.random() * (maxCP - minCP + 1) + minCP);
+let carriage = randomizer(1,20);
+let CPCode = randomizer(9999, 100000);
 let insertOk = true
 
 // FUNZIONE DEL BOTTONE 'GENERA'
@@ -143,4 +139,9 @@ function reset(){
     nameInput.value = ''
     ageInput.value = ''
     kilometresInput.value = ''
+}
+
+// FUNZIONE DEL RANDOMIZZATORE
+function randomizer(min, max){
+    return Math.floor(Math.random() * max) + min;
 }
